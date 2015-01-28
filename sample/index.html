@@ -1,0 +1,8 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="/vendor/require.js"></script>
+<script>
+var socket = io.connect('http://localhost:8000');
+require(['models/index'], function(models) {
+    models.get(1, function(obj) { console.log(obj); });
+});
+</script>
